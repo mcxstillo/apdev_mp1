@@ -1,0 +1,142 @@
+#div {
+  display: block;
+}
+
+#name-heading {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+#about-desc {
+  margin-top: 0rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+#profile-pic {
+  width: 23rem;
+  height: 23rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+}
+
+#page_header {
+  width: 75%;
+  margin-top: 1rem;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  padding: 15px;
+}
+
+.nav-tabs .nav-item {
+  margin-bottom: 15px;
+  transition: .3s;
+}
+
+.nav-item:hover {
+  transform: scale(1.20);
+}
+
+#nav-button {
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+}
+
+#nav-icon {
+  font-size: 29px;
+}
+
+nav-button span {
+  max-width: 0;
+  -webkit-transition: max-width 1s;
+  transition: max-width 1s;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+nav-button:hover span {
+  max-width: 7rem;
+}
+
+@media (min-width: 300px) {
+  #header {
+    justify-content: start;
+    top: 0px;
+  }
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 320px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.h1, h1 {
+  font-size: 10.5rem;
+}
+
+.jumbotron {
+  padding: 1rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: .5rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.h2, h2 {
+  font-size: 2rem;
+}
+
+.card {
+  position: relative;
+  margin-top: 3rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border-radius: .25rem;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 0rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-image: url(../../assets/img/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nav-tabs {
+  border-bottom: 0px;
+}
+
