@@ -18,19 +18,18 @@
   font-size: 1rem;
 }
 
-#profile-pic {
-  width: 23rem;
-  height: 23rem;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 50%;
-}
-
 #page_header {
   width: 75%;
   margin-top: 1rem;
+}
+
+#educ-info {
+  margin-top: 50px;
+}
+
+#school-logo {
+  height: 300px;
+  width: 275px;
 }
 
 #header {
@@ -105,7 +104,10 @@ nav-button:hover span {
 }
 
 p {
-  font-size: 0.7rem;
+  font-size: 1.15rem;
+  font-weight: 460;
+  color: #212529;
+  text-align: justify;
 }
 
 .h2, h2 {
