@@ -15,6 +15,48 @@
   padding: 15px;
 }
 
+h6 {
+  position: relative;
+  right: 0px;
+  text-align: center;
+  float:right;
+  font-size: 2rem;
+  font-weight: 450;
+  color: #212529;
+  width: 100%;
+  margin: 20px;
+}
+
+.card {
+  position: relative;
+  margin-top: 3rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border-radius: .25rem;
+}
+
+.card_body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+span {
+  display: block;
+  text-align: center;
+  right: 0px;
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 1.15rem;
+  font-weight: 460;
+  color: #212529;
+}
+
 .nav-tabs .nav-item {
   margin-bottom: 15px;
   transition: .3s;

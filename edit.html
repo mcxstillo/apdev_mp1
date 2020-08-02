@@ -27,18 +27,21 @@
             <li class="nav-item border rounded-circle"
                 id="nav-button" style="background-color: rgb(255,193,7);"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#about-us"><i class="material-icons">person</i></a></li>
             <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#education"><i class="material-icons">school</i></a></li>
-            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="organizations.html"><i class="material-icons">group</i></a></li>
-            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="contact.html"><i class="icon ion-code-working"></i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#organizations"><i class="material-icons">group</i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#portfolio.html"><i class="icon ion-code-working"></i></a></li>
         </ul>
     </header>
+    <!--  Homepage section with greeting  -->
     <div class="container float-right" style="width: 82%;">
         <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);margin-bottom: 50px;margin-top: 300px;">
             <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Hello, I'm Maia</h2>
             <p style="color: rgb(33,36,40);font-family: Alef, sans-serif;">Get to know me more as you explore this online resume!</p>
         </div>
         <div id="spacer"></div>
+
+    <!--  About me section  -->
         <div id="about-us" style="margin-top: 250px;">
-            <div class="jumbotron" id="page_header-1" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);padding: 20px 8px;margin-bottom: 25px;">
+            <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);padding: 20px 8px;margin-bottom: 25px;">
                 <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About</h2>
                 <p style="color: rgb(33,36,40);"></p>
             </div>
@@ -67,41 +70,64 @@
             </div>
         </div>
     </div>
-    <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
-    <div class="jumbotron" id="page_header-2" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-        <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Education</h2>
+
+    <!--  Education section  -->
+    <div id="education" class="container" style="width: 100%;padding: 0;">
+        <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Education</h2>
+        </div>
+        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div> <!-- line division between header and main body -->
+            <div id="educ_body" class="card" style="background-color: rgba(255,255,255,0);border-style: none; margin-bottom: 50px;"></div>
     </div>
-    <div class="card" style="background-color: rgba(255,255,255,0);border-style: none;">
-        <div class="card-body" style="background-color: rgba(136,136,136,0.1);">
-            <h6 class="display-4 text-right float-right card-title" style="width: 60%;color: #212529;font-size: 38px;font-weight: 450;">High School</h6>
-            <p class="float-right card-text" id="school1" style="width: 60%;margin-top: 10px;margin-right: 10px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><img style="width: 337px;height: 288px;" src="assets/img/ssam.png"></div>
-        <div
-            class="card-body" style="background-color: rgba(136,136,136,0.1);margin-top: 50px;margin-bottom: 50px;">
-            <h6 class="display-4 text-right float-right card-title" style="width: 60%;color: #212529;font-size: 38px;font-weight: 450;">College</h6>
-            <p class="float-right card-text" id="school-1" style="width: 60%;margin-top: 10px;margin-right: 10px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><a class="card-link" href="#">Link</a><a class="card-link" href="#">Link</a>
-            <img
-                style="width: 328px;height: 275px;" src="assets/img/dlsu.png"></div>
-    </div>
-    <div id="spacer-1" style="height: 300px;"></div>
-    <div>
-        <div class="jumbotron" id="page_header-3" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);margin-top: 250px;">
+    <div id="spacer" style="height: 300px;"></div>
+
+    <!--  Organizations section  -->
+    <div id="org_main" class="container" style="width: 100%;padding: 0;">
+        <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
             <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Organizations</h2>
         </div>
-        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
-        <div class="card" style="margin-top: 48px;border-style: none;background-color: rgba(255,255,255,0);margin-bottom: 50px;">
-            <div class="card-body" style="background-color: rgba(136,136,136,0.1);width: 1140px;height: 345px;"><img class="float-left" style="width: 316px;height: 289px;margin-left: 13px;margin-bottom: 0;" src="assets/img/lscs.png">
-                <h6 class="display-4 text-right float-right card-title" style="color: #363739;font-size: 47px;width: 60%;margin-top: 20px;">La Salle Computer Society</h6>
-                <p class="text-right float-right card-text" style="width: 60%;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-            </div>
-            <div class="card-body" style="margin-top: 51px;margin-bottom: 50px;background-color: rgba(136,136,136,0.1);width: 1140px;height: 345px;"><img class="float-left" style="width: 290px;height: 280px;margin-left: 40px;" src="assets/img/lsvc.png">
-                <h6 class="display-4 text-right float-right card-title" style="color: #363739;font-size: 47px;width: 60%;margin-top: 20px;">La Salle Volleyball Club</h6>
-                <p class="float-right card-text" style="width: 60%;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-            </div>
+        <button class="collapsible">Open Collapsible</button>
+        <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
+
+    <!--  Portfolio section  -->
+    <div id="portfolio"></div>
+    <div id="works_main" class="container" style="width: 100%; margin-bottom: 75px;">
+        <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Portfolio</h2>
+            <p style="color: rgb(33,36,40);"></p>
+        </div>
+        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
+        
+        <div id="works" class="row" style="margin-top: 0.75rem;width: 100%;">
+            
+        </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
+        authDomain: "apdev-resume.firebaseapp.com",
+        databaseURL: "https://apdev-resume.firebaseio.com",
+        projectId: "apdev-resume",
+        storageBucket: "apdev-resume.appspot.com",
+        messagingSenderId: "719658931741",
+        appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
+        measurementId: "G-18CEGZNK5S"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    </script>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/edit.js"></script>
 </body>
 
 </html>
