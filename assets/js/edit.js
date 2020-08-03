@@ -30,6 +30,9 @@ function displaySchool (doc,i) {
     edu_cross.textContent = 'delete';
     school_card.appendChild(edu_cross);
 
+
+    // Delete operations
+    // parent Element is where the item was appended to
     edu_cross.addEventListener('click', (e) => {
         let id = e.target.parentElement.getAttribute('school-id');
         console.log(id);
@@ -73,6 +76,8 @@ function displayOrg (doc,i) {
     
     org_card.appendChild(org_body);
 
+    // Delete operations
+    // parent Element is where the item was appended to
     org_cross.addEventListener('click', (e) => {
         let id = e.target.parentElement.getAttribute('org-id');
         db.collection('organizations').doc(id).delete();
@@ -129,6 +134,8 @@ function displayWorks (doc,i) {
 
     content.appendChild(subj);
 
+    // Delete operations
+    // parent Element is where the item was appended to
     work_cross.addEventListener('click', (e) => {
         let id = e.target.parentElement.getAttribute('work-id');
         console.log(id);
@@ -139,6 +146,7 @@ function displayWorks (doc,i) {
 
 }
 
+// Display about contents
 function displayAbout (doc) {
 
     const main = document.getElementById('about_body');
@@ -299,3 +307,5 @@ workform.addEventListener('submit', (e) => {
 
     workform.reset();
 })
+
+// Update
