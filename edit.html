@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets/css/edit_styles.css">
     <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
@@ -27,76 +28,101 @@
             <li class="nav-item border rounded-circle"
                 id="nav-button" style="background-color: rgb(255,193,7);"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#about-us"><i class="material-icons">person</i></a></li>
             <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#education"><i class="material-icons">school</i></a></li>
-            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#organizations"><i class="material-icons">group</i></a></li>
-            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#portfolio.html"><i class="icon ion-code-working"></i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#org_main"><i class="material-icons">group</i></a></li>
+            <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#portfolio"><i class="icon ion-code-working"></i></a></li>
         </ul>
     </header>
     <!--  Homepage section with greeting  -->
-    <div class="container float-right" style="width: 82%;">
+    <div class="container float-right " style="width: 82%;">
         <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);margin-bottom: 50px;margin-top: 300px;">
-            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Hello, I'm Maia</h2>
+            <h2 class="display-2 w3-animate-top" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Hello, I'm Maia</h2>
             <p style="color: rgb(33,36,40);font-family: Alef, sans-serif;">Get to know me more as you explore this online resume!</p>
         </div>
         <div id="spacer"></div>
 
     <!--  About me section  -->
-        <div id="about-us" style="margin-top: 250px;">
-            <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);padding: 20px 8px;margin-bottom: 25px;">
-                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About</h2>
-                <p style="color: rgb(33,36,40);"></p>
+    <div id="about-us" class="container w3-animate-top" style="width: 100%;">
+        <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About</h2>
+            <p style="color: rgb(33,36,40);"></p>
+        </div>
+        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
+        <div class="card float-left" style="width: 100%;background-color: rgba(255,255,255,0);border-style: none;border-color: rgba(0,0,0,0);margin-top: 30px;">
+            <div id="about_body" class="card-body" style="width: 100%;background-color: rgba(52,51,51,0.01);border-style: none;"><img class="float-right" id="profile-pic" src="assets/img/profile.jpg">
+                <h1 class="text-left float-none card-title" id="name-heading" style="width: 50%;color: #32363b;font-family: Lora, serif;font-size: 38px;">Maia Mikaela S. Castillo</h1>
             </div>
-            <div class="card float-left" style="width: 100%;background-color: rgba(255,255,255,0);border-style: none;border-color: rgba(0,0,0,0);margin-top: 0px;">
-                <div class="card-body" style="width: 100%;background-color: rgba(52,51,51,0.01);border-style: none;border-color: rgba(255,255,255,0);margin-bottom: 450px;"><img class="float-right" id="profile-pic" src="assets/img/profile.jpg">
-                    <h1 class="text-left float-none card-title" id="name-heading" style="width: 50%;color: #32363b;font-family: Lora, serif;font-size: 38px;">Maia Mikaela S. Castillo</h1>
-                    <p class="text-justify float-none card-text" id="about-desc" style="width: 50%;color: rgba(0,0,0,0.63);font-size: 1.2rem;margin-top: 10px;"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>You can
-                        contact me on any of my accounts below!</p>
-                    <div class="row no-gutters text-center d-xl-flex flex-column" id="social-icons" style="border-style: none;border-color: rgba(0,123,255,0);width: 24%;margin-left: 60px;margin-top: 30px;">
-                        <div class="col-6 d-inline float-left justify-content-xl-center" style="border-style: none;border-color: rgba(0,123,255,0);margin-bottom: 10px;height: 0;"><a class="float-left" href="https://www.facebook.com/28MMSC" style="width: 0px;height: 0px;">Link<i class="fab fa-facebook d-inline float-left d-xl-flex" style="width: 22px;height: 32px;font-size: 25px;color: rgb(50,54,59);text-align: justify;"></i></a>
-                            <p
-                                class="float-none d-xl-flex align-items-xl-center" style="margin-bottom: 0;color: #313437;margin-top: 1px;font-size: 15px;font-family: Actor, sans-serif;margin-right: 8px;margin-left: 43px;">28MMSC</p>
-                        </div>
-                        <div class="col-9" style="margin-bottom: 10px;margin-top: 10px;">
-                            <p class="d-inline float-right d-xl-flex" style="color: #313437;margin-bottom: 0;width: 107px;font-size: 15px;font-family: Actor, sans-serif;margin-top: 2px;margin-right: 45px;">_28MMSC</p><a href="https://twitter.com/_28MMSC" style="width: 19px;height: 32px;">Link<i class="fab fa-twitter d-inline float-left" style="width: 22px;height: 32px;font-size: 29px;color: #313437;"></i></a></div>
-                        <div class="col-6"
-                            style="margin-bottom: 10px;">
-                            <p class="d-inline float-right" style="color: #313437;margin-bottom: 0;font-size: 15px;font-family: Actor, sans-serif;margin-top: 2px;margin-right: 30px;">mcxstillo</p><a href="https://github.com/mcxstillo" style="width: 19px;height: 32px;">Link<i class="fab fa-github-square d-inline float-left" style="width: 22px;height: 32px;font-size: 29px;color: #313437;margin-bottom: 0;"></i></a></div>
-                        <div
-                            class="col-10"><a href="https://www.facebook.com/28MMSC" style="width: 19px;height: 32px;">Link<i class="material-icons d-inline float-left" style="width: 22px;height: 32px;font-size: 29px;color: #313437;">mail</i></a>
-                            <p class="text-left float-right"
-                                style="font-size: 15px;color: #313437;margin-bottom: 0;margin-top: 3px;margin-right: -5px;">maia_castillo@dlsu.edu.ph</p>
-                    </div>
-                </div>
+            <div id="soc_icons" style="width:55%; text-align: center; height: 80rem;">
             </div>
         </div>
     </div>
 
     <!--  Education section  -->
-    <div id="education" class="container" style="width: 100%;padding: 0;">
+    <div class="container w3-animate-top" style="width: 100%;padding: 0;">
         <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Education</h2>
+            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Education  
+                <button class="collapsible">Add</button>
+                <div class="content">
+                    <form id="edu-form">
+                        <br>
+                        <label>Degree: </label><br>
+                        <input type="text" id="degree"><br>
+                        <label>School: </label><br>
+                        <input type="text" id="school"><br>
+                        <label>Start Year: </label><br>
+                        <input type="number" id="start"><br>
+                        <label>End Year: </label><br>
+                        <input type="number" id="end"><br><br>
+                        <button type="submit" style="float: left; margin-top: 0.3rem; margin-bottom: 1rem; margin-left: 4.5rem;">Submit</button>
+                    </form>
+                </div></h2>
         </div>
         <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div> <!-- line division between header and main body -->
             <div id="educ_body" class="card" style="background-color: rgba(255,255,255,0);border-style: none; margin-bottom: 50px;"></div>
     </div>
+    
     <div id="spacer" style="height: 300px;"></div>
 
     <!--  Organizations section  -->
-    <div id="org_main" class="container" style="width: 100%;padding: 0;">
+    <div id="org_main" class="container w3-animate-top" style="width: 100%;padding: 0;">
         <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Organizations</h2>
+            <h2 class="display-2" style="color: rgb(50,54,59);">Organizations <button class="collapsible">Add</button>
+            <div class="content">
+                <form id="org-form">
+                    <br>
+                    <label>Name of Organization: </label><br>
+                    <input type="text" id="name"><br>
+                    <label>Position: </label><br>
+                    <input type="text" id="position"><br>
+                    <label>Year: </label><br>
+                    <input type="number" id="year"><br>
+                    <button style="float: left; margin-top: 1rem; margin-bottom: 1rem; margin-left: 4rem;">Submit</button>
+                </form>
+            </div></h2>
         </div>
-        <button class="collapsible">Open Collapsible</button>
-        <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
     </div>
+
+    <div id="spacer" style="width: 100%; height: 1000px;"></div>
 
     <!--  Portfolio section  -->
     <div id="portfolio"></div>
-    <div id="works_main" class="container" style="width: 100%; margin-bottom: 75px;">
+    <div id="works_main" class="container w3-animate-top" style="width: 100%; margin-bottom: 75px;">
         <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Portfolio</h2>
+            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Portfolio  <button class="collapsible">Add</button>
+                <div class="content">
+                    <form id="work-form">
+                        <br>
+                        <label>Project Title: </label><br>
+                        <input type="text" id="title"><br>
+                        <label>Subject: </label><br>
+                        <input type="text" id="subject"><br>
+                        <label>Description: </label><br>
+                        <input type="text" id="desc"><br>
+                        <label>Link: </label><br>
+                        <input type="text" id="link"><br><br>
+                        <button style="float: left; margin-top: 0.5rem; margin-bottom: 1rem; margin-left: 4rem;">Submit</button>
+                    </form>
+                </div></h2>
             <p style="color: rgb(33,36,40);"></p>
         </div>
         <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>

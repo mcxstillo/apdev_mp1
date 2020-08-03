@@ -155,6 +155,11 @@ body {
   background-attachment: fixed;
 }
 
+.w3-animate-top {
+  position: relative;
+  animation: animatetop 1s;
+}
+
 .nav-tabs {
   border-bottom: 0px;
 }

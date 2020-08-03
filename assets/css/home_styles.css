@@ -15,11 +15,12 @@
   bottom: 0;
   z-index: 9997;
   padding: 15px;
+  transition
 }
 
-.nav-tabs .nav-item {
-  margin-bottom: 15px;
-  transition: .3s;
+.w3-animate-top {
+  position: relative;
+  animation: animatetop 1.5s;
 }
 
 .nav-tabs .nav-item {
@@ -29,7 +30,7 @@
 
 .nav-item:hover {
   transform: scale(1.20);
-}
+} 
 
 #nav-button {
   height: 60px;

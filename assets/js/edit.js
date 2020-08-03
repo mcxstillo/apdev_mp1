@@ -1,6 +1,4 @@
-// global variables for crud operations
-
-// display contents of education section
+// Display contents of education section
 function displaySchool (doc,i) {
 
     const main = document.getElementById('educ_body');
@@ -52,7 +50,7 @@ function displayOrg (doc,i) {
 
     let org_body = document.createElement('div');
     org_body.setAttribute('org-id', doc.id);
-    org_body.setAttribute('class', 'card_body');
+    org_body.setAttribute('class', 'card-body');
 
     let name = document.createElement('h6');
     name.textContent = doc.data().name;
@@ -68,8 +66,9 @@ function displayOrg (doc,i) {
     org_body.appendChild(year);
 
     let org_cross = document.createElement('button');
-
+    org_cross.setAttribute('type', 'submit');
     org_cross.textContent = 'delete';
+
     org_body.appendChild(org_cross);
     
     org_card.appendChild(org_body);
@@ -140,6 +139,83 @@ function displayWorks (doc,i) {
 
 }
 
+function displayAbout (doc) {
+
+    const main = document.getElementById('about_body');
+
+    let about_card = document.createElement('div');
+    about_card.setAttribute('style', 'width: 60%px; margin-top: 1.5rem; align-content: space-between;');
+    about_card.setAttribute('class', 'card-body');
+
+    main.appendChild(about_card);
+
+    let desc = document.createElement('p');
+    desc.setAttribute('id', 'about-desc');
+    desc.setAttribute('class', 'p-about');
+    desc.textContent = doc.data().desc;
+
+    about_card.appendChild(desc);
+
+    const icons = document.getElementById('soc_icons');
+
+    // Append facebook contact
+    let fb = document.createElement('div');
+    fb.setAttribute('class', 'col-6 d-inline');
+    fb.setAttribute('style', 'border-style: none;border-color: rgba(0,123,255,0);margin-bottom: 10px;height: 0;');
+
+    let fbref = document.createElement('a');
+    fbref.setAttribute('href', doc.data().facebook);
+
+    let fbicon = document.createElement('i');
+    fbicon.setAttribute('class', 'fab fa-facebook d-inline');
+    fbicon.setAttribute('style', 'width: 22px;height: 32px;font-size: 40px;color: rgb(50,54,59);');
+
+    fbref.appendChild(fbicon);
+    fb.appendChild(fbref);
+
+    icons.appendChild(fb);
+
+    // Append twitter contact
+    let twt = document.createElement('div');
+    twt.setAttribute('class', 'col-6 d-inline');
+    twt.setAttribute('style', 'border-style: none;border-color: rgba(0,123,255,0);margin-bottom: 10px;height: 0;');
+
+    let twtref = document.createElement('a');
+    twtref.setAttribute('href', doc.data().twitter);
+
+    let twticon = document.createElement('i');
+    twticon.setAttribute('class', 'fab fa-twitter d-inline');
+    twticon.setAttribute('style', 'width: 22px;height: 32px;font-size: 40px;color: rgb(50,54,59);');
+
+    twtref.appendChild(twticon);
+    twt.appendChild(twtref);
+
+    icons.appendChild(twt);
+
+    // Append github contact
+    let git = document.createElement('div');
+    git.setAttribute('class', 'col-6 d-inline');
+    git.setAttribute('style', 'border-style: none;border-color: rgba(0,123,255,0);margin-bottom: 10px;height: 0;');
+
+    let gitref = document.createElement('a');
+    gitref.setAttribute('href', doc.data().github);
+
+    let giticon = document.createElement('i');
+    giticon.setAttribute('class', 'fab fa-github-square d-inline');
+    giticon.setAttribute('style', 'width: 22px;height: 32px;font-size: 40px;color: rgb(50,54,59);');
+
+    gitref.appendChild(giticon);
+    git.appendChild(gitref);
+
+    icons.appendChild(git);
+}
+
+db.collection('introductions').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        displayAbout(doc);
+    })
+})
+
 let i=0;
 
 db.collection('edu-backgrounds').orderBy('year_start').get().then((snapshot) => {
@@ -169,9 +245,7 @@ db.collection('works').get().then((snapshot) => {
     })
 })
 
-/* CRUD operations */
-
-// Adding new values
+// Code for collapsible
 var coll = document.getElementsByClassName("collapsible");
 i=0;
             
@@ -185,4 +259,43 @@ i=0;
             content.style.maxHeight = content.scrollHeight + "px";
        } 
      });
-    }
+}
+
+
+/* CRUD operations */
+const eduform = document.getElementById('edu-form');
+const orgform = document.getElementById('org-form');
+const workform = document.getElementById('work-form');
+
+// Adding new values
+eduform.addEventListener('submit', (e) => {
+    db.collection('edu-backgrounds').add({
+        degree: eduform.degree.value,
+        school: eduform.school.value,
+        year_end: eduform.end.value,
+        year_start: eduform.start.value
+    })
+
+    eduform.reset();
+})
+
+orgform.addEventListener('submit', (e) => {
+    db.collection('organizations').add({
+        name: orgform.name.value,
+        position: orgform.position.value,
+        year: orgform.year.value
+    })
+
+    orgform.reset();
+})
+
+workform.addEventListener('submit', (e) => {
+    db.collection('works').add({
+        title: workform.title.value,
+        subject: workform.subject.value,
+        desc: workform.desc.value,
+        link: workform.link.value
+    })
+
+    workform.reset();
+})
