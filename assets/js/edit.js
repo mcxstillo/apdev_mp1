@@ -1,5 +1,28 @@
+const loginForm = document.getElementById('login-form');
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const email = loginForm['login-email'].value;
+    const password = loginForm['login-pass'].value;
+
+    console.log(email);
+    console.log(password);
+
+    firebase.auth().signInWithEmailAndPassword(email, password).then(cred =>{
+        document.getElementById('login').style.display = "none";
+        document.getElementById('sidebar').classList.add('d-lg-flex');
+        document.getElementById('homepage').classList.remove('logged-out');
+    }).catch(function (err) {
+        if (err.code == "auth/wrong-password")
+            alert("wrong password");
+        else
+            alert(err.message);
+    })
+}) 
+
 // Display contents of education section
-function displaySchool (doc,i) {
+function displaySchool (doc) {
 
     const main = document.getElementById('educ_body');
 
@@ -41,7 +64,7 @@ function displaySchool (doc,i) {
 }
 
 // display contents of org section
-function displayOrg (doc,i) {
+function displayOrg (doc) {
 
     const main = document.getElementById('org_main');
 
@@ -162,7 +185,12 @@ function displayAbout (doc) {
     desc.setAttribute('class', 'p-about');
     desc.textContent = doc.data().desc;
 
+    let email = document.createElement('p');
+    email.setAttribute('class', 'p-about');
+    email.textContent = doc.data().email;
+
     about_card.appendChild(desc);
+    about_card.appendChild(email); 
 
     const icons = document.getElementById('soc_icons');
 
@@ -224,27 +252,19 @@ db.collection('introductions').get().then((snapshot) => {
     })
 })
 
-let i=0;
-
 db.collection('edu-backgrounds').orderBy('year_start').get().then((snapshot) => {
 
     snapshot.docs.forEach(doc => {
-        i++;
-        displaySchool(doc,i);
+        displaySchool(doc);
     })
 })
-
-i=0;
 
 db.collection('organizations').orderBy('year').get().then((snapshot) => {
 
 snapshot.docs.forEach(doc => {
-    i++;
-    displayOrg(doc,i);
+    displayOrg(doc);
 })
 })
-
-i=0;
 
 db.collection('works').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
@@ -308,4 +328,16 @@ workform.addEventListener('submit', (e) => {
     workform.reset();
 })
 
-// Update
+/*
+// Update for About section
+const about = document.getElementById('about-form');
+
+about.addEventListener('submit', (e) => {
+    db.collection('introductions').doc('WeVC8I5mTKtcfdlbgHaU').update({
+        desc: about.desc.value,
+        email: about.email.value,
+        facebook: about.facebook.value,
+        github: about.github.value,
+        twitter: about.twitter.value
+})
+}) */

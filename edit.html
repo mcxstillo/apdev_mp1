@@ -17,10 +17,17 @@
 </head>
 
 <body class="d-lg-flex justify-content-lg-center align-items-lg-center">
-    
+
+    <div id="login" class="login-clean" style="width: 100%;height: 100%;">
+        <form id="login-form" method="post">
+            <div class="form-group"><input class="form-control" type="email" id="login-email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="login-pass" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(255,193,7);color: #363739;">Log In</button></div>
+        </form>
+    </div>
 
     <!-- Container for sidebar navigation -->
-    <div id="header" class="logged-out sidebar float-left d-lg-flex align-items-center justify-content-xl-start" style="width: 9%;height: 100%;">
+    <div id="header" class="sidebar float-left d-lg-flex align-items-center justify-content-xl-start" style="width: 9%;height: 100%;">
         <ul id="sidebar" class="logged-out nav nav-tabs justify-content-lg-center align-items-lg-center flex-column" style="width: 78px;height: 100%;">
             <li class="nav-item" id="nav-button"><a class="nav-link active text-left bg-warning border rounded-circle shadow-none" id="nav-icon" href="#homepage" style="border-width: 1px;background-color: rgb(255,255,255);"><i class="fa fa-home shadow-none"></i></a></li>
             <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="#about-us"><i class="material-icons">person</i></a></li>
