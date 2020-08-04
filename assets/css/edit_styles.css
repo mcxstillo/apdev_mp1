@@ -48,6 +48,11 @@ button {
   border-radius: 30px;
   color: #ffffff;
   background-color: #212529;
+  transition: 0.4s;
+}
+
+button:hover {
+  transform: scale(1.10);
 }
 
 #spacer {
@@ -265,9 +270,11 @@ label {
 }
 
 .content {
-  color: #212529;
-  background-color: rgba(136,136,136,0.7);
+  display:grid;
   align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: rgba(136,136,136,0.7);
   margin-top: 1rem;
   margin-bottom: 2rem;
   padding: 0 18px;
@@ -277,6 +284,13 @@ label {
   width: 37%;
   float: right;
   transition: max-height 0.2s ease-out;
+}
+
+.content form button {
+  float: left; 
+  margin-top: 0.3rem; 
+  margin-bottom: 1rem; 
+  margin-left: 3rem;
 }
 
 #name-heading {

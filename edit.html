@@ -50,7 +50,22 @@
         <div id="spacer"></div>
         <div id="about-us" class="container w3-animate-top" style="height: 50%; width: 100%;">
             <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About</h2>
+                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About 
+                    <button class="collapsible">Edit</button>
+                    <div class="content">
+                        <form id="edu-form">
+                            <br>
+                            <label>Degree: </label><br>
+                            <input type="text" id="degree"><br>
+                            <label>School: </label><br>
+                            <input type="text" id="school"><br>
+                            <label>Start Year: </label><br>
+                            <input type="number" id="start"><br>
+                            <label>End Year: </label><br>
+                            <input type="number" id="end"><br><br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div></h2>
                 <p style="color: rgb(33,36,40);"></p>
             </div>
             <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
@@ -81,9 +96,10 @@
                         <input type="number" id="start"><br>
                         <label>End Year: </label><br>
                         <input type="number" id="end"><br><br>
-                        <button type="submit" style="float: left; margin-top: 0.3rem; margin-bottom: 1rem; margin-left: 4.5rem;">Submit</button>
+                        <button type="submit">Submit</button>
                     </form>
                 </div></h2>
+                <p style="color: rgb(33,36,40);"></p>
         </div>
         <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div> <!-- line division between header and main body -->
             <div id="educ_body" class="card" style="background-color: rgba(255,255,255,0);border-style: none; margin-bottom: 50px;"></div>
@@ -104,9 +120,10 @@
                         <input type="text" id="position"><br>
                         <label>Year: </label><br>
                         <input type="number" id="year"><br>
-                        <button style="float: left; margin-top: 1rem; margin-bottom: 1rem; margin-left: 4rem;">Submit</button>
+                        <button type="submit">Submit</button>
                     </form>
                 </div></h2>
+                <p style="color: rgb(33,36,40);"></p>
             </div>
             <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
         </div>
@@ -129,7 +146,7 @@
                             <input type="text" id="desc"><br>
                             <label>Link: </label><br>
                             <input type="text" id="link"><br><br>
-                            <button style="float: left; margin-top: 0.5rem; margin-bottom: 1rem; margin-left: 4rem;">Submit</button>
+                            <button type="submit">Submit</button>
                         </form>
                     </div></h2>
                 <p style="color: rgb(33,36,40);"></p>
