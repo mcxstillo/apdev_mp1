@@ -47,7 +47,7 @@ button {
   font-size: 1rem;
   border-radius: 30px;
   color: #ffffff;
-  background-color: #212529;
+  background-color: #76593D;
   transition: 0.4s;
 }
 
@@ -108,25 +108,12 @@ button:hover {
 }
 
 #nav-icon {
+  color: #000000;
   font-size: 29px;
 }
 
-nav-button span {
-  max-width: 0;
-  -webkit-transition: max-width 1s;
-  transition: max-width 1s;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-nav-button:hover span {
-  max-width: 7rem;
-}
-
 .row {
-  display: flex;
+  display: grid;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 320px;
@@ -161,7 +148,7 @@ p {
 
 .h2, h2 {
   font-size: 2rem;
-  width: 60%;
+  width: 100%;
 }
 
 .jumbotron {
@@ -207,8 +194,8 @@ h6 {
 
 .card {
   position: relative;
-  margin-top: 3rem;
   display: flex;
+  margin-top: 2.5rem;
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
@@ -247,10 +234,9 @@ label {
 }
 
 .collapsible {
-  
   color: #ffffff;
-  background-color: #212529;
-  font-size: 1rem;
+  background-color: #76593D;
+  font-size: 1.2rem;
   border-radius: 30px;
   margin-top: 2.5rem;
   margin-right: 2rem;
@@ -265,7 +251,8 @@ label {
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  color: #000000;
+  background-color: #Dfcfc1;
   transform: scale(1.10);
 }
 
@@ -281,7 +268,7 @@ label {
   font-size: 1rem;
   max-height: 0;
   overflow: hidden;
-  width: 37%;
+  width: 100%;
   float: right;
   transition: max-height 0.2s ease-out;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<!--  white red yellow (pataas)  -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -50,30 +50,32 @@
         <div id="spacer"></div>
         <div id="about-us" class="container w3-animate-top" style="height: 50%; width: 100%;">
             <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About 
+                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About
                     <button class="collapsible">Edit</button>
                     <div class="content">
-                        <form id="edu-form">
+                        <form id="aboutform">
                             <br>
-                            <label>Degree: </label><br>
-                            <input type="text" id="degree"><br>
-                            <label>School: </label><br>
-                            <input type="text" id="school"><br>
-                            <label>Start Year: </label><br>
-                            <input type="number" id="start"><br>
-                            <label>End Year: </label><br>
-                            <input type="number" id="end"><br><br>
-                            <button type="submit">Submit</button>
+                            <label>Description </label><br>
+                            <textarea id="desc" name="desc" rows="4" cols="17" form="aboutform"></textarea><br>
+                            <label>Email </label><br>
+                            <input type="email" id="about_email"><br>
+                            <label>Facebook Link </label><br>
+                            <input type="text" id="fb"><br>
+                            <label>Twitter Link </label><br>
+                            <input type="text" id="twt"><br>
+                            <label>GitHub Link </label><br>
+                            <input type="text" id="git"><br> 
+                            <button type="submit">Submit</button> 
                         </form>
                     </div></h2>
                 <p style="color: rgb(33,36,40);"></p>
             </div>
-            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
             <div class="card float-left" style="width: 100%;background-color: rgba(255,255,255,0);border-style: none;border-color: rgba(0,0,0,0);margin-top: 30px;">
+                <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
                 <div id="about_body" class="card-body" style="width: 100%;background-color: rgba(52,51,51,0.01);border-style: none;"><img class="float-right" id="profile-pic" src="assets/img/profile.jpg">
-                    <h1 class="text-left float-none card-title" id="name-heading" style="width: 50%;color: #32363b;font-family: Lora, serif;font-size: 38px;">Maia Mikaela S. Castillo</h1>
+                    <h1 class="text-left float-none card-title" id="name-heading" style="width: 70%;color: #32363b;font-family: Lora, serif;font-size: 2.5rem;">Maia Mikaela S. Castillo</h1>
                 </div>
-                <div id="soc_icons" style="width:55%; text-align: center; height: 4rem;">
+                <div id="soc_icons" style="width:70%; text-align: center; height: 3rem;">
                 </div>
             </div>
         </div>
@@ -81,7 +83,7 @@
     <div id="spacer" style="width: 100%; height: 1000px;"></div>
 
     <!--  Education section  -->
-    <div id="education" class="container w3-animate-top" style="width: 100%;padding: 0;">
+    <div id="education" class="row container w3-animate-top" style="width: 100%;padding: 0;">
         <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
             <h2 class="display-2" style="color: rgb(50,54,59);">Education  
                 <button class="collapsible">Add</button>
@@ -108,7 +110,7 @@
     <div id="spacer" style="height: 300px;"></div>
 
         <!--  Organizations section  -->
-        <div id="org_main" class="container w3-animate-top" style="width: 100%;padding: 0;">
+        <div id="org_main" class="row container w3-animate-top" style="width: 100%;">
             <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
                 <h2 class="display-2" style="color: rgb(50,54,59);">Organizations <button class="collapsible">Add</button>
                 <div class="content">
@@ -151,11 +153,10 @@
                     </div></h2>
                 <p style="color: rgb(33,36,40);"></p>
             </div>
-            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
-            
             <div id="works" class="row" style="margin-top: 0.75rem;width: 100%;">
                 
             </div>
+            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
         </div>
     </div>
 
