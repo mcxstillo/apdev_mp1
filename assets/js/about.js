@@ -19,26 +19,31 @@ function displayAbout (doc) {
 
     let about_card = document.createElement('div');
     about_card.setAttribute('id', 'WeVC8I5mTKtcfdlbgHaU');
-    about_card.setAttribute('style', 'width: 60%px; margin-top: 1.5rem; align-content: space-between;');
     about_card.setAttribute('class', 'card-body');
 
     about.appendChild(about_card);
 
     let desc = document.createElement('p');
     desc.setAttribute('id', 'about-desc');
-    desc.setAttribute('class', 'p-about');
     desc.textContent = doc.data().desc;
 
-    let email = document.createElement('p');
-    email.setAttribute('class', 'p-about');
-    email.textContent = doc.data().email;
+    let email = document.createElement('div');
+    email.setAttribute('class', 'email');
+
+    let outro = document.createElement('p');
+    outro.textContent =  "Contact me in my email or any of the links below!"
+
+    let add = document.createElement('p');
+    add.textContent = "Email:  " + doc.data().email;
+
+    email.appendChild(outro);
+    email.appendChild(add);
 
     about_card.appendChild(desc);
-    about_card.appendChild(email); 
+    about_card.appendChild(email);
 
     let socicons = document.createElement('div');
     socicons.setAttribute('id', 'soc_icons');
-    socicons.setAttribute('style', 'width:70%; text-align: center; height: 3rem;');
 
     about.appendChild(socicons);
 
@@ -51,8 +56,7 @@ function displayAbout (doc) {
     fbref.setAttribute('href', doc.data().facebook);
 
     let fbicon = document.createElement('i');
-    fbicon.setAttribute('class', 'fab fa-facebook d-inline');
-    fbicon.setAttribute('style', 'width: 22px;height: 32px;font-size: 40px;color: rgb(50,54,59);');
+    fbicon.setAttribute('class', 'fab fa-facebook d-inline icons');
 
     fbref.appendChild(fbicon);
     fb.appendChild(fbref);
@@ -68,8 +72,7 @@ function displayAbout (doc) {
     twtref.setAttribute('href', doc.data().twitter);
 
     let twticon = document.createElement('i');
-    twticon.setAttribute('class', 'fab fa-twitter d-inline');
-    twticon.setAttribute('style', 'width: 22px;height: 32px;font-size: 40px;color: rgb(50,54,59);');
+    twticon.setAttribute('class', 'fab fa-twitter d-inline icons');
 
     twtref.appendChild(twticon);
     twt.appendChild(twtref);
@@ -85,8 +88,7 @@ function displayAbout (doc) {
     gitref.setAttribute('href', doc.data().github);
 
     let giticon = document.createElement('i');
-    giticon.setAttribute('class', 'fab fa-github-square d-inline');
-    giticon.setAttribute('style', 'width: 22px;height: 32px;font-size: 40px;color: rgb(50,54,59);');
+    giticon.setAttribute('class', 'fab fa-github-square d-inline icons');
 
     gitref.appendChild(giticon);
     git.appendChild(gitref);
