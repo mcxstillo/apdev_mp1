@@ -157,6 +157,28 @@ p {
   margin-bottom: 2rem;
 }
 
+.email {
+  display: block;
+  font-size: 1rem;
+  width: 70%;
+  height: 20%;
+  color: rgba(0,0,0,0.63);
+}
+
+#soc_icons {
+  width:45%; 
+  text-align: center; 
+  height: 3rem;
+  margin-top: 3rem;
+}
+
+.icons {
+  width: 22px;
+  height: 32px;
+  font-size: 40px;
+  color: rgb(50,54,59);
+}
+
 /* Education styles */
 #school-card {
   justify-content: right;
@@ -288,14 +310,18 @@ label {
 }
 
 #about-desc {
+  display: block;
+  width: 50%;
+  color: rgba(0,0,0,0.63);
   float: left;
   margin-top: 0rem;
   margin-right: 1rem;
+  margin-bottom: 3rem;
   font-size: 1rem;
 }
 
 .p-about {
-  font-size: 0.7rem;
+  font-size: 1rem;
   width: 50%;
   color: rgba(0,0,0,0.63);
 }

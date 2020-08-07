@@ -54,19 +54,27 @@ function displayAbout (doc) {
 
     let desc = document.createElement('p');
     desc.setAttribute('id', 'about-desc');
-    desc.setAttribute('class', 'p-about');
     desc.textContent = doc.data().desc;
 
-    let email = document.createElement('p');
-    email.setAttribute('class', 'p-about');
-    email.textContent = doc.data().email;
+    let email = document.createElement('div');
+    email.setAttribute('class', 'email');
+
+    let outro = document.createElement('p');
+    outro.classList.add('email');
+    outro.textContent =  "Contact me in my email or any of the links below!"
+
+    let add = document.createElement('p');
+    add.classList.add('email');
+    add.textContent = "Email:  " + doc.data().email;
+
+    email.appendChild(outro);
+    email.appendChild(add);
 
     about_card.appendChild(desc);
     about_card.appendChild(email); 
 
     let socicons = document.createElement('div');
     socicons.setAttribute('id', 'soc_icons');
-    socicons.setAttribute('style', 'width:70%; text-align: center; height: 3rem;');
 
     about.appendChild(socicons);
 
