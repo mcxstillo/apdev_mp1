@@ -30,6 +30,7 @@ loginForm.addEventListener('submit', (e) => {
 function displayAbout (doc) {
 
     let about_card = document.createElement('div');
+    about_card.setAttribute('id', 'WeVC8I5mTKtcfdlbgHaU');
     about_card.setAttribute('style', 'width: 60%px; margin-top: 1.5rem; align-content: space-between;');
     about_card.setAttribute('class', 'card-body');
 
@@ -47,7 +48,11 @@ function displayAbout (doc) {
     about_card.appendChild(desc);
     about_card.appendChild(email); 
 
-    const icons = document.getElementById('soc_icons');
+    let socicons = document.createElement('div');
+    socicons.setAttribute('id', 'soc_icons');
+    socicons.setAttribute('style', 'width:70%; text-align: center; height: 3rem;');
+
+    about.appendChild(socicons);
 
     // Append facebook contact
     let fb = document.createElement('div');
@@ -64,7 +69,7 @@ function displayAbout (doc) {
     fbref.appendChild(fbicon);
     fb.appendChild(fbref);
 
-    icons.appendChild(fb);
+    socicons.appendChild(fb);
 
     // Append twitter contact
     let twt = document.createElement('div');
@@ -81,7 +86,7 @@ function displayAbout (doc) {
     twtref.appendChild(twticon);
     twt.appendChild(twtref);
 
-    icons.appendChild(twt);
+    socicons.appendChild(twt);
 
     // Append github contact
     let git = document.createElement('div');
@@ -98,7 +103,7 @@ function displayAbout (doc) {
     gitref.appendChild(giticon);
     git.appendChild(gitref);
 
-    icons.appendChild(git);
+    socicons.appendChild(git);
 }
 
 // Display contents of education section
@@ -244,15 +249,25 @@ function displayWorks (doc, i) {
     })
 }
 
+db.collection('introductions').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        displayAbout(doc);
+    })
+}) 
+
 db.collection('introductions').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     console.log(changes);
 
-    if(changes.type == 'modified'){
-        displayAbout(changes.doc);
-    } else if (changes.type == 'added') {
-        displayAbout(changes.doc);
-    }
+    changes.forEach(change => {
+        if(change.type == 'modified'){
+            let li = about.querySelector("[id=WeVC8I5mTKtcfdlbgHaU]");
+            let icons = about.querySelector("[id=soc_icons]");
+            about.removeChild(li);
+            icons.parentElement.removeChild(icons);
+            displayAbout(change.doc);
+        }
+    })
 }) 
 
 db.collection('edu-backgrounds').orderBy('year_end').onSnapshot(snapshot=>{
@@ -343,6 +358,8 @@ aboutform.addEventListener('submit', (e) => {
 
 // Adding new values
 eduform.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     db.collection('edu-backgrounds').add({
         degree: eduform.degree.value,
         school: eduform.school.value,
@@ -354,6 +371,8 @@ eduform.addEventListener('submit', (e) => {
 })
 
 orgform.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     db.collection('organizations').add({
         name: orgform.name.value,
         position: orgform.position.value,
@@ -364,6 +383,8 @@ orgform.addEventListener('submit', (e) => {
 })
 
 workform.addEventListener('submit', (e) => {
+    e.preventDefault(); 
+    
     db.collection('works').add({
         title: workform.title.value,
         subject: workform.subject.value,

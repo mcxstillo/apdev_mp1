@@ -1,4 +1,4 @@
-function displaySchool (doc,i) {
+function displaySchool (doc) {
 
     const main = document.getElementById('educ_body');
 
@@ -30,7 +30,6 @@ let i=0;
 db.collection('edu-backgrounds').orderBy('year_start').get().then((snapshot) => {
 
     snapshot.docs.forEach(doc => {
-        i++;
-        displaySchool(doc,i);
+        displaySchool(doc);
     })
 })

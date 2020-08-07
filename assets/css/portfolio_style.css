@@ -74,11 +74,10 @@ nav-button:hover span {
 }
 
 .subtitle {
-  display: block;
   font-size: 0.73rem;
-  margin: 5px;
+  margin-top: 0;
   font-weight: 400;
-  color: #404549;
+  color: #212529;
 }
 
 .h2, h2 {
@@ -108,10 +107,9 @@ nav-button:hover span {
   border-radius: .25rem;
 }
 
-.card-body {
-  width: 100%;
-  height: 160px;
-  background-color: rgba(255,255,255,0);
+#project-title {
+  font-size: 1.5rem;
+  color: #363739;
 }
 
 body {
@@ -125,11 +123,6 @@ body {
   background-image: url(../../assets/img/background.jpg);
   background-size: cover;
   background-attachment: fixed;
-}
-
-.w3-animate-top {
-  position: relative;
-  animation: animatetop 1s;
 }
 
 .nav-tabs {
