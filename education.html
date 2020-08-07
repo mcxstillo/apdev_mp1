@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>education</title>
+    <title>Education</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -25,33 +25,17 @@
                     <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="portfolio.html"><i class="icon ion-code-working"></i></a></li>
             </ul>
         </header>
-    <div class="container w3-animate-top" style="width: 100%;padding: 0;">
-        <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-            <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Education</h2>
+        <div id="education" class="row container w3-animate-top" style="width: 100%;padding: 0;">
+            <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+                <h2 class="display-2" style="color: rgb(50,54,59);">Education</h2>
+                    <p style="color: rgb(33,36,40);"></p>
+            </div>
+            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div> <!-- line division between header and main body -->
+                <div id="educ_body" class="card" style="background-color: rgba(255,255,255,0);border-style: none; margin-bottom: 50px;"></div>
         </div>
-        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div> <!-- line division between header and main body -->
-        <div id="educ_body" class="card" style="background-color: rgba(255,255,255,0);border-style: none; margin-bottom: 50px;"></div>
-    </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-
-    <script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
-        authDomain: "apdev-resume.firebaseapp.com",
-        databaseURL: "https://apdev-resume.firebaseio.com",
-        projectId: "apdev-resume",
-        storageBucket: "apdev-resume.appspot.com",
-        messagingSenderId: "719658931741",
-        appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
-        measurementId: "G-18CEGZNK5S"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    var db = firebase.firestore();
-    </script>
-
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/education.js"></script>

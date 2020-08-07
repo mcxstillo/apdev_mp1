@@ -1,20 +1,46 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
+    authDomain: "apdev-resume.firebaseapp.com",
+    databaseURL: "https://apdev-resume.firebaseio.com",
+    projectId: "apdev-resume",
+    storageBucket: "apdev-resume.appspot.com",
+    messagingSenderId: "719658931741",
+    appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
+    measurementId: "G-18CEGZNK5S"
+};
+
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+
+const about = document.getElementById('about_body');
+
+// Display about contents
 function displayAbout (doc) {
 
-    const main = document.getElementById('about_body');
-
     let about_card = document.createElement('div');
+    about_card.setAttribute('id', 'WeVC8I5mTKtcfdlbgHaU');
     about_card.setAttribute('style', 'width: 60%px; margin-top: 1.5rem; align-content: space-between;');
     about_card.setAttribute('class', 'card-body');
 
-    main.appendChild(about_card);
+    about.appendChild(about_card);
 
     let desc = document.createElement('p');
     desc.setAttribute('id', 'about-desc');
+    desc.setAttribute('class', 'p-about');
     desc.textContent = doc.data().desc;
 
-    about_card.appendChild(desc);
+    let email = document.createElement('p');
+    email.setAttribute('class', 'p-about');
+    email.textContent = doc.data().email;
 
-    const icons = document.getElementById('soc_icons');
+    about_card.appendChild(desc);
+    about_card.appendChild(email); 
+
+    let socicons = document.createElement('div');
+    socicons.setAttribute('id', 'soc_icons');
+    socicons.setAttribute('style', 'width:70%; text-align: center; height: 3rem;');
+
+    about.appendChild(socicons);
 
     // Append facebook contact
     let fb = document.createElement('div');
@@ -31,7 +57,7 @@ function displayAbout (doc) {
     fbref.appendChild(fbicon);
     fb.appendChild(fbref);
 
-    icons.appendChild(fb);
+    socicons.appendChild(fb);
 
     // Append twitter contact
     let twt = document.createElement('div');
@@ -48,7 +74,7 @@ function displayAbout (doc) {
     twtref.appendChild(twticon);
     twt.appendChild(twtref);
 
-    icons.appendChild(twt);
+    socicons.appendChild(twt);
 
     // Append github contact
     let git = document.createElement('div');
@@ -65,7 +91,7 @@ function displayAbout (doc) {
     gitref.appendChild(giticon);
     git.appendChild(gitref);
 
-    icons.appendChild(git);
+    socicons.appendChild(git);
 }
 
 db.collection('introductions').get().then((snapshot) => {

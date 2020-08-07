@@ -1,21 +1,38 @@
-function displayWorks (doc,i) {
+var firebaseConfig = {
+    apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
+    authDomain: "apdev-resume.firebaseapp.com",
+    databaseURL: "https://apdev-resume.firebaseio.com",
+    projectId: "apdev-resume",
+    storageBucket: "apdev-resume.appspot.com",
+    messagingSenderId: "719658931741",
+    appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
+    measurementId: "G-18CEGZNK5S"
+};
 
-    const main = document.getElementById('works');
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+
+const works = document.getElementById('works_main');
+
+function displayWorks (doc, i) {
 
     let column = document.createElement('div');
-    column.setAttribute('id', 'works' + i);
     column.setAttribute('class', 'col-md-6 d-xl-flex');
-    column.setAttribute('style', '"width: 50%;margin: 0px;"');
+    
+    if (i % 2) {
+        column.setAttribute('style', 'float: left;');
+    } else {
+        column.setAttribute('style', 'float: right;');
+    }
 
     let work = document.createElement('div');
     work.setAttribute('class', 'card');
-    work.setAttribute('style', ' border: 0px; background-color: rgba(136,136,136,0.1);');
 
     column.appendChild(work);
 
     let content = document.createElement('div');
+    content.setAttribute('work-id', doc.id);
     content.setAttribute('class', 'card-body');
-    content.setAttribute('style', 'height: 160px;');
 
     work.appendChild(content);
 
@@ -27,21 +44,20 @@ function displayWorks (doc,i) {
     
     content.appendChild(link);
 
-    let subj = document.createElement('div');
+    let desc = document.createElement('span');
+    desc.setAttribute('class', 'subtitle');
+    desc.setAttribute('style', 'font-size: 0.90rem;');
+    desc.textContent = doc.data().desc;
+
+    content.appendChild(desc);
+
+    let subj = document.createElement('span');
     subj.setAttribute('class', 'subtitle');
     subj.textContent = doc.data().subject;
 
     content.appendChild(subj);
 
-    let desc = document.createElement('span');
-    desc.setAttribute('class', 'card-text subtitle');
-    desc.setAttribute('style', 'font-size: 0.90rem; margin-top: 20px');
-    desc.textContent = doc.data().desc;
-
-    content.appendChild(desc);
-
-    main.appendChild(column);
-
+    works.appendChild(column);
 }
 
 let i=0;

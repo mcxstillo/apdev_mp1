@@ -132,54 +132,35 @@
 
         <!--  Portfolio section  -->
         <div id="portfolio"></div>
-        <div id="works_main" class="container w3-animate-top" style="width: 100%; margin-bottom: 75px;">
-            <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
-                <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Portfolio  <button class="collapsible">Add</button>
-                    <div class="content">
-                        <form id="work-form">
-                            <br>
-                            <label>Project Title: </label><br>
-                            <input type="text" id="title"><br>
-                            <label>Subject: </label><br>
-                            <input type="text" id="subject"><br>
-                            <label>Description: </label><br>
-                            <input type="text" id="desc"><br>
-                            <label>Link: </label><br>
-                            <input type="text" id="link"><br><br>
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div></h2>
-                <p style="color: rgb(33,36,40);"></p>
+            <div id="works_main" class="container w3-animate-top" style="width: 100%; margin-bottom: 75px;">
+                <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
+                    <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">Portfolio  <button class="collapsible">Add</button>
+                        <div class="content">
+                            <form id="work-form">
+                                <br>
+                                <label>Project Title: </label><br>
+                                <input type="text" id="title"><br>
+                                <label>Subject: </label><br>
+                                <input type="text" id="subject"><br>
+                                <label>Description: </label><br>
+                                <input type="text" id="desc"><br>
+                                <label>Link: </label><br>
+                                <input type="text" id="link"><br><br>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div></h2>
+                    <p style="color: rgb(33,36,40);"></p>
+                </div>
+                <div id="works" class="row" style="margin-top: 0.75rem;width: 100%;">
+                    
+                </div>
+                <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
             </div>
-            <div id="works" class="row" style="margin-top: 0.75rem;width: 100%;">
-                
-            </div>
-            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
         </div>
-    </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-
-    <script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
-        authDomain: "apdev-resume.firebaseapp.com",
-        databaseURL: "https://apdev-resume.firebaseio.com",
-        projectId: "apdev-resume",
-        storageBucket: "apdev-resume.appspot.com",
-        messagingSenderId: "719658931741",
-        appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
-        measurementId: "G-18CEGZNK5S"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-    </script>
-
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/edit.js"></script>

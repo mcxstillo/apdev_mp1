@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>about</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -29,45 +26,25 @@
                 <li class="nav-item" id="nav-button"><a class="nav-link active bg-warning border rounded-circle" id="nav-icon" href="portfolio.html"><i class="icon ion-code-working"></i></a></li>
         </ul>
     </header>
-    <div class="container w3-animate-top" style="width: 80%;">
+    <div id="about-us" class="container w3-animate-top" style="height: 50%; width: 100%;">
         <div class="jumbotron" id="page_header" style="color: transparent;width: 100%;background-color: rgba(233,236,239,0);">
             <h2 class="display-2" style="border-color: rgb(30,32,34);color: rgb(50,54,59);">About</h2>
             <p style="color: rgb(33,36,40);"></p>
         </div>
-        <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
         <div class="card float-left" style="width: 100%;background-color: rgba(255,255,255,0);border-style: none;border-color: rgba(0,0,0,0);margin-top: 30px;">
-            <div id="about_body" class="card-body w3-animate-top" style="width: 100%;background-color: rgba(52,51,51,0.01);border-style: none;"><img class="float-right" id="profile-pic" src="assets/img/profile.jpg">
-                <h1 class="text-left float-none card-title" id="name-heading" style="width: 50%;color: #32363b;font-family: Lora, serif;font-size: 38px;">Maia Mikaela S. Castillo</h1>
-            </div>
-            <div id="soc_icons" style="width:55%; text-align: center;">
-
+            <div style="width: 100%;height: 3px;background-color: rgba(35,25,25,0.17);"></div>
+            <div id="about_body" class="card-body" style="width: 100%;background-color: rgba(52,51,51,0.01);border-style: none;"><img class="float-right" id="profile-pic" src="assets/img/profile.jpg">
+                <h1 class="text-left float-none card-title" id="name-heading" style="width: 70%;color: #32363b;font-family: Lora, serif;font-size: 2.5rem;">Maia Mikaela S. Castillo</h1>
             </div>
         </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-
-    <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
-            authDomain: "apdev-resume.firebaseapp.com",
-            databaseURL: "https://apdev-resume.firebaseio.com",
-            projectId: "apdev-resume",
-            storageBucket: "apdev-resume.appspot.com",
-            messagingSenderId: "719658931741",
-            appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
-            measurementId: "G-18CEGZNK5S"
-        };
     
-        firebase.initializeApp(firebaseConfig);
-        var db = firebase.firestore();
-
-        </script>
-    
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/about.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/about.js"></script>
 </body>
 
 </html>

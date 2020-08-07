@@ -1,3 +1,19 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyBwYFv5i-7bxKwD587UZHy9kOx6RBVDBTs",
+    authDomain: "apdev-resume.firebaseapp.com",
+    databaseURL: "https://apdev-resume.firebaseio.com",
+    projectId: "apdev-resume",
+    storageBucket: "apdev-resume.appspot.com",
+    messagingSenderId: "719658931741",
+    appId: "1:719658931741:web:94eb0502f48ae8a823d8f4",
+    measurementId: "G-18CEGZNK5S"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+
 /* Form queries to fetch data in the html */
 const loginForm = document.getElementById('login-form');
 
